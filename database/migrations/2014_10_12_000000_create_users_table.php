@@ -15,12 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->enum('role', ['Patient', 'Medecin', 'Admin']);
-            $table->enum('genre', ['Femme', 'Homme']);
-            $table->string('image')->nullable();
-            $table->unsignedBigInteger('specialite_id')->nullable();
-            $table->foreign('specialite_id')->references('id')->on('specialites')->onDelete('cascade')->nullable();
-            $table->string('phone_number')->nullable();
-            $table->string('id_card_number')->nullable();
+            // $table->enum('genre', ['Femme', 'Homme']);
+            // $table->string('image')->nullable();
+            // $table->foreignId('specialite_id')->constrained('specialites')->nullable() ;
+            // $table->string('phone_number')->nullable();
+            // $table->string('id_card_number')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

@@ -11,7 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('specialites', function (Blueprint $table) {
+            $table->id();
+            $table->string('specialite');
+            $table->string('description');
+            $table->string('image')->nullable();
+            $table->timestamps();
+        }); 
     }
 
     /**
